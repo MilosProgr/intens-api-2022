@@ -33,3 +33,9 @@ jobs:
           context: .
           push: true
           tags: milos225/myapp:latest
+      - name: Deploy container
+        run: |
+          docker pull milos225/myapp:latest
+          docker stop myapp || true
+          docker rm myapp || true
+          docker run -d --name myapp -p 8080:8080 milos225/myapp:latest
