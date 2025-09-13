@@ -32,4 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: Milos225/myapp:latest
+          tags: milos225/myapp:latest
